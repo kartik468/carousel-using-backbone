@@ -1,0 +1,343 @@
+// mixins start
+border-radius(n...) {	
+  -webkit-border-radius n
+  -moz-border-radius n
+  border-radius n
+}
+
+transform(n...) {
+	-webkit-transform n
+	-moz-transform n
+	-ms-transform n
+	-o-transform n
+}
+
+transform-origin(n...) {
+	-webkit-transform-origin top
+	-o-transform-origin top
+	-ms-transform-origin top
+	transform-origin top
+}
+
+transition(n...) {
+	-webkit-transition n
+	-o-transition n
+	-ms-transition n
+	transition n
+}
+// mixins end
+
+// // CSS Reset start
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+//  // HTML5 display-role reset for older browsers 
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+// CSS Reset end
+
+
+
+* {
+	box-sizing border-box;
+}
+
+header {
+        background-color: gray;
+}
+
+nav {
+	padding-bottom: 30px;
+	ul {
+		text-align: center;
+		background-color: black;
+		transition: max-height 0.4s linear;
+		
+		li {
+			display: inline-block;
+			padding: 30px 20px;
+			color: white;
+			cursor: pointer;
+			
+			span:hover {				
+				color: pink;
+			}
+		}
+	}
+	.handle {
+		text-align: left;
+		display: none;
+		cursor: pointer;
+	}
+	.logo {
+		width: 64px;
+    	box-sizing: initial;
+    	position: relative;
+    	padding: 30px 41px;
+	}
+
+	.logo-image {
+		background-image url('../images/logo.png');
+		width: 64px;
+    	height: 55px;
+    	position: absolute;
+    	top: 10px;
+    	
+	}
+	.bottom-triangle {
+	    position: absolute;
+	    left: 3px;
+		bottom: -25px;
+	    z-index -1;
+	    width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 40px 72px 0 72px;
+		border-color: black transparent transparent transparent;
+	}
+}
+
+#portfolio-carousel-container {
+	height: 350px;
+    width: 600px;
+    margin: auto;
+	position: relative;
+	padding: 30px 0px;
+	
+	
+	#portfolio-carousel {
+		position: relative;
+		box-sizing: border-box;
+		overflow: hidden;
+		height: 100%;
+		
+		.items-container {
+			height: 100%;
+			width: 80%;
+			position: relative;
+			margin: auto;
+			
+			.item {
+				height: 100%;
+				width: 100%;
+				text-align: center;
+				display: none;
+				position: absolute;
+				
+				.item-image {
+					height: 100%;
+					width: 80%;
+					background-repeat: no-repeat;
+				}
+			}
+			
+			.item.current,
+			.item.next,
+			.item.prev {
+				display: block;
+			}
+		}
+		
+		.carousel-arrow {
+			height: 100%
+			width: 10%
+			position: absolute;
+			top: 0;
+			background-color: #cec9c9;
+			
+			&.active {
+				cursor: pointer;
+			}
+
+			&.prev {
+				left: 0;
+			}
+			&.next {
+				right: 0;
+			}
+		}
+		
+		.items-bullets {
+			position: absolute;
+			bottom: 5px;
+			z-index 1;
+			width: 100%;
+			text-align: center;
+
+			.bullet {
+				width: 15px;
+				height: 15px;
+				border-radius: 50%;
+				border: 1px solid white;
+				display: inline-block;
+				margin: 0px 7px;
+				
+				&.current {
+					background-color: white;
+				}
+				
+				&.active {
+					cursor pointer; 
+				}
+			}
+		}
+	}
+}
+
+
+#about-me-container {
+	position: relative;
+	background-color: #02b986;
+	
+	#about-me-data {
+		width: 80%;
+		margin: auto;
+    	padding: 20px 0px;
+		
+		#about-me {
+			position: relative;
+			border-left: 1px solid gray;
+    		border-right: 1px solid gray;
+		}
+
+		#person-image-container {
+			display: inline-block;
+			width: 20%;
+			padding: 0px 10px;
+			position: relative;
+			vertical-align: top;
+    		white-space: normal;
+						
+			img {
+				width: 100%;
+			}
+		}
+		
+		#about-wrapper {
+			display: inline-block;
+			width: 78%;
+			
+			#person-name {
+				color: #fff;
+			    font-size: 2em;
+			    padding-bottom: 5px;
+			}
+			
+			#person-des {
+				color: #09525a;
+			    padding-bottom: 15px;
+			}
+			
+			#person-info {
+				color: white;
+			}
+		}
+	}
+
+}
+
+
+
+ /*==========  Mobile First Method  ==========*/
+
+@media only screen and (max-width : 650px) {
+	
+	nav {
+		padding-bottom: 0;
+		.hide {
+			// transform scaleY(0)
+			max-height: 0;
+		}
+		ul {
+			max-height: 20em;
+			// transform-origin: top;
+
+			// transition transform 0.26s ease-out;
+			
+			// transform: scaleY(1);
+			overflow: hidden;
+			li {
+				display: block;
+				// box-sizing: border-box;
+				text-align: left;
+				padding: 2px;
+			}
+			
+			.logo {
+				display: none;
+			}
+		}
+		.handle {
+			display: block;
+			background-color: #0F0F0F;
+			color: white;
+			padding: 5px 5px;
+		}
+	}
+	
+	#portfolio-carousel-container {
+		height: 200px;
+    	width: 400px;
+		
+		#portfolio-carousel {
+			.item {
+				.item-image {
+					width: 80%;
+				}
+			}
+		}
+	}
+	
+	#about-me-container {
+		#about-me-data {
+			#person-image-container {
+				display: block;
+				width: 70%;
+			}
+			#about-wrapper {
+				display: block;
+				width: 100%;
+				padding: 0 10px;
+			}
+		}
+	}
+}
+
+

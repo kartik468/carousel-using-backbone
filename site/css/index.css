@@ -1,0 +1,337 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+* {
+  box-sizing: border-box;
+}
+header {
+  background-color: #808080;
+}
+nav {
+  padding-bottom: 30px;
+}
+nav ul {
+  text-align: center;
+  background-color: #000;
+  -webkit-transition: max-height 0.4s linear;
+  -o-transition: max-height 0.4s linear;
+  -ms-transition: max-height 0.4s linear;
+  transition: max-height 0.4s linear;
+}
+nav ul li {
+  display: inline-block;
+  padding: 30px 20px;
+  color: #fff;
+  cursor: pointer;
+}
+nav ul li span:hover {
+  color: #ffc0cb;
+}
+nav .handle {
+  text-align: left;
+  display: none;
+  cursor: pointer;
+}
+nav .logo {
+  width: 64px;
+  box-sizing: initial;
+  position: relative;
+  padding: 30px 41px;
+}
+nav .logo-image {
+  background-image: url("../images/logo.png");
+  width: 64px;
+  height: 55px;
+  position: absolute;
+  top: 10px;
+}
+nav .bottom-triangle {
+  position: absolute;
+  left: 3px;
+  bottom: -25px;
+  z-index: -1;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 40px 72px 0 72px;
+  border-color: #000 transparent transparent transparent;
+}
+#portfolio-carousel-container {
+  height: 350px;
+  width: 600px;
+  margin: auto;
+  position: relative;
+  padding: 30px 0px;
+}
+#portfolio-carousel-container #portfolio-carousel {
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  height: 100%;
+}
+#portfolio-carousel-container #portfolio-carousel .items-container {
+  height: 100%;
+  width: 80%;
+  position: relative;
+  margin: auto;
+}
+#portfolio-carousel-container #portfolio-carousel .items-container .item {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  display: none;
+  position: absolute;
+}
+#portfolio-carousel-container #portfolio-carousel .items-container .item .item-image {
+  height: 100%;
+  width: 80%;
+  background-repeat: no-repeat;
+}
+#portfolio-carousel-container #portfolio-carousel .items-container .item.current,
+#portfolio-carousel-container #portfolio-carousel .items-container .item.next,
+#portfolio-carousel-container #portfolio-carousel .items-container .item.prev {
+  display: block;
+}
+#portfolio-carousel-container #portfolio-carousel .carousel-arrow {
+  height: 100%;
+  width: 10%;
+  position: absolute;
+  top: 0;
+  background-color: #cec9c9;
+}
+#portfolio-carousel-container #portfolio-carousel .carousel-arrow.active {
+  cursor: pointer;
+}
+#portfolio-carousel-container #portfolio-carousel .carousel-arrow.prev {
+  left: 0;
+}
+#portfolio-carousel-container #portfolio-carousel .carousel-arrow.next {
+  right: 0;
+}
+#portfolio-carousel-container #portfolio-carousel .items-bullets {
+  position: absolute;
+  bottom: 5px;
+  z-index: 1;
+  width: 100%;
+  text-align: center;
+}
+#portfolio-carousel-container #portfolio-carousel .items-bullets .bullet {
+  width: 15px;
+  height: 15px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  display: inline-block;
+  margin: 0px 7px;
+}
+#portfolio-carousel-container #portfolio-carousel .items-bullets .bullet.current {
+  background-color: #fff;
+}
+#portfolio-carousel-container #portfolio-carousel .items-bullets .bullet.active {
+  cursor: pointer;
+}
+#about-me-container {
+  position: relative;
+  background-color: #02b986;
+}
+#about-me-container #about-me-data {
+  width: 80%;
+  margin: auto;
+  padding: 20px 0px;
+}
+#about-me-container #about-me-data #about-me {
+  position: relative;
+  border-left: 1px solid #808080;
+  border-right: 1px solid #808080;
+}
+#about-me-container #about-me-data #person-image-container {
+  display: inline-block;
+  width: 20%;
+  padding: 0px 10px;
+  position: relative;
+  vertical-align: top;
+  white-space: normal;
+}
+#about-me-container #about-me-data #person-image-container img {
+  width: 100%;
+}
+#about-me-container #about-me-data #about-wrapper {
+  display: inline-block;
+  width: 78%;
+}
+#about-me-container #about-me-data #about-wrapper #person-name {
+  color: #fff;
+  font-size: 2em;
+  padding-bottom: 5px;
+}
+#about-me-container #about-me-data #about-wrapper #person-des {
+  color: #09525a;
+  padding-bottom: 15px;
+}
+#about-me-container #about-me-data #about-wrapper #person-info {
+  color: #fff;
+}
+/*==========  Mobile First Method  ==========*/
+@media only screen and (max-width: 650px) {
+  nav {
+    padding-bottom: 0;
+  }
+  nav .hide {
+    max-height: 0;
+  }
+  nav ul {
+    max-height: 20em;
+    overflow: hidden;
+  }
+  nav ul li {
+    display: block;
+    text-align: left;
+    padding: 2px;
+  }
+  nav ul .logo {
+    display: none;
+  }
+  nav .handle {
+    display: block;
+    background-color: #0f0f0f;
+    color: #fff;
+    padding: 5px 5px;
+  }
+  #portfolio-carousel-container {
+    height: 200px;
+    width: 400px;
+  }
+  #portfolio-carousel-container #portfolio-carousel .item .item-image {
+    width: 80%;
+  }
+  #about-me-container #about-me-data #person-image-container {
+    display: block;
+    width: 70%;
+  }
+  #about-me-container #about-me-data #about-wrapper {
+    display: block;
+    width: 100%;
+    padding: 0 10px;
+  }
+}
